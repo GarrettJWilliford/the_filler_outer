@@ -1,0 +1,1531 @@
+import random
+import string
+
+
+def names():
+    crap_ton_names = """Emma
+Olivia
+Ava
+Isabella
+Sophia
+Mia
+Charlotte
+Amelia
+Evelyn
+Abigail
+Harper
+Emily
+Elizabeth
+Avery
+Sofia
+Ella
+Madison
+Scarlett
+Victoria
+Aria
+Grace
+Chloe
+Camila
+Penelope
+Riley
+Layla
+Lillian
+Nora
+Zoey
+Mila
+Aubrey
+Hannah
+Lily
+Addison
+Eleanor
+Natalie
+Luna
+Savannah
+Brooklyn
+Leah
+Zoe
+Stella
+Hazel
+Ellie
+Paisley
+Audrey
+Skylar
+Violet
+Claire
+Bella
+Aurora
+Lucy
+Anna
+Samantha
+Caroline
+Genesis
+Aaliyah
+Kennedy
+Kinsley
+Allison
+Maya
+Sarah
+Madelyn
+Adeline
+Alexa
+Ariana
+Elena
+Gabriella
+Naomi
+Alice
+Sadie
+Hailey
+Eva
+Emilia
+Autumn
+Quinn
+Nevaeh
+Piper
+Ruby
+Serenity
+Willow
+Everly
+Cora
+Kaylee
+Lydia
+Aubree
+Arianna
+Eliana
+Peyton
+Melanie
+Gianna
+Isabelle
+Julia
+Valentina
+Nova
+Clara
+Vivian
+Reagan
+Mackenzie
+Madeline
+Brielle
+Delilah
+Isla
+Rylee
+Katherine
+Sophie
+Josephine
+Ivy
+Liliana
+Jade
+Maria
+Taylor
+Hadley
+Kylie
+Emery
+Adalynn
+Natalia
+Annabelle
+Faith
+Alexandra
+Ximena
+Ashley
+Brianna
+Raelynn
+Bailey
+Mary
+Athena
+Andrea
+Leilani
+Jasmine
+Lyla
+Margaret
+Alyssa
+Adalyn
+Arya
+Norah
+Khloe
+Kayla
+Eden
+Eliza
+Rose
+Ariel
+Melody
+Alexis
+Isabel
+Sydney
+Juliana
+Lauren
+Iris
+Emerson
+London
+Morgan
+Lilly
+Charlie
+Aliyah
+Valeria
+Arabella
+Sara
+Finley
+Trinity
+Ryleigh
+Jordyn
+Jocelyn
+Kimberly
+Esther
+Molly
+Valerie
+Cecilia
+Anastasia
+Daisy
+Reese
+Laila
+Mya
+Amy
+Teagan
+Amaya
+Elise
+Harmony
+Paige
+Adaline
+Fiona
+Alaina
+Nicole
+Genevieve
+Lucia
+Alina
+Mckenzie
+Callie
+Payton
+Eloise
+Brooke
+Londyn
+Mariah
+Julianna
+Rachel
+Daniela
+Gracie
+Catherine
+Angelina
+Presley
+Josie
+Harley
+Adelyn
+Vanessa
+Makayla
+Parker
+Juliette
+Amara
+Marley
+Lila
+Ana
+Rowan
+Alana
+Michelle
+Malia
+Rebecca
+Brooklynn
+Brynlee
+Summer
+Sloane
+Leila
+Sienna
+Adriana
+Sawyer
+Kendall
+Juliet
+Destiny
+Alayna
+Elliana
+Diana
+Hayden
+Ayla
+Dakota
+Angela
+Noelle
+Rosalie
+Joanna
+Jayla
+Alivia
+Lola
+Emersyn
+Georgia
+Selena
+June
+Daleyza
+Tessa
+Maggie
+Jessica
+Remi
+Delaney
+Camille
+Vivienne
+Hope
+Mckenna
+Gemma
+Olive
+Alexandria
+Blakely
+Izabella
+Catalina
+Raegan
+Journee
+Gabrielle
+Lucille
+Ruth
+Amiyah
+Evangeline
+Blake
+Thea
+Amina
+Giselle
+Lilah
+Melissa
+River
+Kate
+Adelaide
+Charlee
+Vera
+Leia
+Gabriela
+Zara
+Jane
+Journey
+Elaina
+Miriam
+Briella
+Stephanie
+Cali
+Ember
+Lilliana
+Aniyah
+Logan
+Kamila
+Brynn
+Ariella
+Makenzie
+Annie
+Mariana
+Kali
+Haven
+Elsie
+Nyla
+Paris
+Lena
+Freya
+Adelynn
+Lyric
+Camilla
+Sage
+Jennifer
+Paislee
+Talia
+Alessandra
+Juniper
+Fatima
+Raelyn
+Amira
+Arielle
+Phoebe
+Kinley
+Ada
+Nina
+Ariah
+Samara
+Myla
+Brinley
+Cassidy
+Maci
+Aspen
+Allie
+Keira
+Kaia
+Makenna
+Amanda
+Heaven
+Joy
+Lia
+Madilyn
+Gracelyn
+Laura
+Evelynn
+Lexi
+Haley
+Miranda
+Kaitlyn
+Daniella
+Felicity
+Jacqueline
+Evie
+Angel
+Danielle
+Ainsley
+Dylan
+Kiara
+Millie
+Jordan
+Maddison
+Rylie
+Alicia
+Maeve
+Margot
+Kylee
+Phoenix
+Heidi
+Zuri
+Alondra
+Lana
+Madeleine
+Gracelynn
+Kenzie
+Miracle
+Shelby
+Elle
+Adrianna
+Bianca
+Addilyn
+Kira
+Veronica
+Gwendolyn
+Esmeralda
+Chelsea
+Alison
+Skyler
+Magnolia
+Daphne
+Jenna
+Everleigh
+Kyla
+Braelynn
+Harlow
+Annalise
+Mikayla
+Dahlia
+Maliyah
+Averie
+Scarlet
+Kayleigh
+Luciana
+Kelsey
+Nadia
+Amber
+Gia
+Kamryn
+Yaretzi
+Carmen
+Jimena
+Erin
+Christina
+Katie
+Ryan
+Viviana
+Alexia
+Anaya
+Serena
+Katelyn
+Ophelia
+Regina
+Helen
+Remington
+Camryn
+Cadence
+Royalty
+Amari
+Kathryn
+Skye
+Emely
+Jada
+Ariyah
+Aylin
+Saylor
+Kendra
+Cheyenne
+Fernanda
+Sabrina
+Francesca
+Eve
+Mckinley
+Frances
+Sarai
+Carolina
+Kennedi
+Nylah
+Tatum
+Alani
+Lennon
+Raven
+Zariah
+Leslie
+Winter
+Abby
+Mabel
+Sierra
+April
+Willa
+Carly
+Jolene
+Rosemary
+Aviana
+Madelynn
+Selah
+Renata
+Lorelei
+Briana
+Celeste
+Wren
+Charleigh
+Leighton
+Annabella
+Jayleen
+Braelyn
+Ashlyn
+Jazlyn
+Mira
+Oakley
+Malaysia
+Edith
+Avianna
+Maryam
+Emmalyn
+Hattie
+Kensley
+Macie
+Bristol
+Marlee
+Demi
+Cataleya
+Maia
+Sylvia
+Itzel
+Allyson
+Lilith
+Melany
+Kaydence
+Holly
+Nayeli
+Meredith
+Nia
+Liana
+Megan
+Justice
+Bethany
+Alejandra
+Janelle
+Elisa
+Adelina
+Ashlynn
+Elianna
+Aleah
+Myra
+Lainey
+Blair
+Kassidy
+Charley
+Virginia
+Kara
+Helena
+Sasha
+Julie
+Michaela
+Carter
+Matilda
+Kehlani
+Henley
+Maisie
+Hallie
+Jazmin
+Priscilla
+Marilyn
+Cecelia
+Danna
+Colette
+Baylee
+Elliott
+Ivanna
+Cameron
+Celine
+Alayah
+Hanna
+Imani
+Angelica
+Emelia
+Kalani
+Alanna
+Lorelai
+Macy
+Karina
+Addyson
+Aleena
+Aisha
+Johanna
+Mallory
+Leona
+Mariam
+Kynlee
+Madilynn
+Karen
+Karla
+Skyla
+Beatrice
+Dayana
+Gloria
+Milani
+Savanna
+Karsyn
+Rory
+Giuliana
+Lauryn
+Liberty
+Galilea
+Aubrie
+Charli
+Kyleigh
+Brylee
+Jillian
+Anne
+Haylee
+Dallas
+Azalea
+Jayda
+Tiffany
+Avah
+Shiloh
+Bailee
+Jazmine
+Esme
+Coraline
+Madisyn
+Elaine
+Lilian
+Kyra
+Kaliyah
+Kora
+Octavia
+Irene
+Kelly
+Lacey
+Laurel
+Adley
+Anika
+Janiyah
+Dorothy
+Sutton
+Julieta
+Kimber
+Remy
+Cassandra
+Rebekah
+Collins
+Elliot
+Emmy
+Sloan
+Hayley
+Amalia
+Jemma
+Jamie
+Melina
+Leyla
+Jaylah
+Anahi
+Jaliyah
+Kailani
+Harlee
+Wynter
+Saige
+Alessia
+Monica
+Anya
+Antonella
+Emberly
+Khaleesi
+Ivory
+Greta
+Maren
+Alena
+Emory
+Alaia
+Cynthia
+Addisyn
+Alia
+Lylah
+Angie
+Ariya
+Alma
+Crystal
+Jayde
+Aileen
+Kinslee
+Siena
+Zelda
+Katalina
+Marie
+Pearl
+Reyna
+Mae
+Zahra
+Kailey
+Jessie
+Tiana
+Amirah
+Madalyn
+Alaya
+Lilyana
+Julissa
+Armani
+Lennox
+Lillie
+Jolie
+Laney
+Roselyn
+Mara
+Joelle
+Rosa
+Kaylani
+Bridget
+Liv
+Oaklyn
+Aurelia
+Clarissa
+Elyse
+Marissa
+Monroe
+Kori
+Elsa
+Rosie
+Amelie
+Aitana
+Aliza
+Eileen
+Poppy
+Emmie
+Braylee
+Milana
+Addilynn
+Royal
+Chaya
+Frida
+Bonnie
+Amora
+Stevie
+Tatiana
+Malaya
+Mina
+Emerie
+Reign
+Zaylee
+Annika
+Kenia
+Linda
+Kenna
+Faye
+Reina
+Brittany
+Marina
+Astrid
+Kadence
+Mikaela
+Jaelyn
+Briar
+Kaylie
+Teresa
+Bria
+Hadassah
+Lilianna
+Guadalupe
+Rayna
+Chanel
+Lyra
+Noa
+Zariyah
+Laylah
+Aubrielle
+Aniya
+Livia
+Ellen
+Meadow
+Amiya
+Ellis
+Elora
+Milan
+Hunter
+Princess
+Leanna
+Nathalie
+Clementine
+Nola
+Tenley
+Simone
+Lina
+Marianna
+Martha
+Sariah
+Louisa
+Noemi
+Emmeline
+Kenley
+Belen
+Erika
+Myah
+Lara
+Amani
+Ansley
+Everlee
+Maleah
+Salma
+Jaelynn
+Kiera
+Dulce
+Nala
+Natasha
+Averi
+Mercy
+Penny
+Ariadne
+Deborah
+Elisabeth
+Zaria
+Hana
+Kairi
+Yareli
+Raina
+Ryann
+Lexie
+Thalia
+Karter
+Annabel
+Christine
+Estella
+Keyla
+Adele
+Aya
+Estelle
+Landry
+Tori
+Perla
+Lailah
+Miah
+Rylan
+Angelique
+Avalynn
+Romina
+Ari
+Jaycee
+Jaylene
+Kai
+Louise
+Mavis
+Scarlette
+Belle
+Lea
+Nalani
+Rivka
+Ayleen
+Calliope
+Dalary
+Zaniyah
+Kaelyn
+Sky
+Jewel
+Joselyn
+Madalynn
+Paola
+Giovanna
+Isabela
+Karlee
+Aubriella
+Azariah
+Tinley
+Dream
+Claudia
+Corinne
+Erica
+Milena
+Aliana
+Kallie
+Alyson
+Joyce
+Tinsley
+Whitney
+Emilee
+Paisleigh
+Carolyn
+Jaylee
+Zoie
+Frankie
+Andi
+Judith
+Paula
+Xiomara
+Aiyana
+Amia
+Analia
+Audrina
+Hadlee
+Rayne
+Amayah
+Cara
+Celia
+Lyanna
+Opal
+Amaris
+Clare
+Gwen
+Giana
+Veda
+Alisha
+Davina
+Rhea
+Sariyah
+Noor
+Danica
+Kathleen
+Lillianna
+Lindsey
+Maxine
+Paulina
+Hailee
+Harleigh
+Nancy
+Jessa
+Raquel
+Raylee
+Zainab
+Chana
+Lisa
+Heavenly
+Oaklynn
+Aminah
+Emmalynn
+Patricia
+India
+Janessa
+Paloma
+Ramona
+Sandra
+Abril
+Emmaline
+Itzayana
+Kassandra
+Vienna
+Marleigh
+Kailyn
+Novalee
+Rosalyn
+Hadleigh
+Luella
+Taliyah
+Avalyn
+Barbara
+Iliana
+Jana
+Meilani
+Aadhya
+Alannah
+Blaire
+Brenda
+Casey
+Selene
+Lizbeth
+Adrienne
+Annalee
+Malani
+Aliya
+Miley
+Nataly
+Bexley
+Joslyn
+Maliah
+Zion
+Breanna
+Melania
+Estrella
+Ingrid
+Jayden
+Kaya
+Kaylin
+Harmoni
+Arely
+Jazlynn
+Kiana
+Dana
+Mylah
+Oaklee
+Ailani
+Kailee
+Legacy
+Marjorie
+Paityn
+Courtney
+Ellianna
+Jurnee
+Karlie
+Evalyn
+Holland
+Kenya
+Magdalena
+Carla
+Halle
+Aryanna
+Kaiya
+Kimora
+Naya
+Saoirse
+Susan
+Desiree
+Ensley
+Renee
+Esperanza
+Treasure
+Caylee
+Ellison
+Kristina
+Adilynn
+Anabelle
+Egypt
+Spencer
+Tegan
+Aranza
+Vada
+Emerald
+Florence
+Marlowe
+Micah
+Sonia
+Sunny
+Tara
+Riya
+Yara
+Alisa
+Nathalia
+Yamileth
+Saanvi
+Samira
+Sylvie
+Brenna
+Carlee
+Jenny
+Miya
+Monserrat
+Zendaya
+Alora """
+    crap_ton_names = crap_ton_names.split()
+    return crap_ton_names
+
+def lastname():
+    namez = """
+  1. Smith  
+
+  2. Johnson  
+
+  3. Williams  
+
+  4. Jones  
+
+  5. Brown  
+
+  6. Davis  
+
+  7. Miller  
+
+  8. Wilson  
+
+  9. Moore  
+
+  10. Taylor  
+
+  11. Anderson  
+
+  12. Thomas  
+
+  13. Jackson  
+
+  14. White  
+
+  15. Harris  
+
+  16. Martin  
+
+  17. Thompson  
+
+  18. Garcia  
+
+  19. Martinez  
+
+  20. Robinson  
+
+  21. Clark  
+
+  22. Rodriguez  
+
+  23. Lewis  
+
+  24. Lee  
+
+  25. Walker  
+
+  26. Hall  
+
+  27. Allen  
+
+  28. Young  
+
+  29. Hernandez  
+
+  30. King  
+
+  31. Wright  
+
+  32. Lopez  
+
+  33. Hill  
+
+  34. Scott  
+
+  35. Green  
+
+  36. Adams  
+
+  37. Baker  
+
+  38. Gonzalez  
+
+  39. Nelson  
+
+  40. Carter  
+
+  41. Mitchell  
+
+  42. Perez  
+
+  43. Roberts  
+
+  44. Turner  
+
+  45. Phillips  
+
+  46. Campbell  
+
+  47. Parker  
+
+  48. Evans  
+
+  49. Edwards  
+
+  50. Collins  
+
+  51. Stewart  
+
+  52. Sanchez  
+
+  53. Morris  
+
+  54. Rogers  
+
+  55. Reed  
+
+  56. Cook  
+
+  57. Morgan  
+
+  58. Bell  
+
+  59. Murphy  
+
+  60. Bailey  
+
+  61. Rivera  
+
+  62. Cooper  
+
+  63. Richardson  
+
+  64. Cox  
+
+  65. Howard  
+
+  66. Ward  
+
+  67. Torres  
+
+  68. Peterson  
+
+  69. Gray  
+
+  70. Ramirez  
+
+  71. James  
+
+  72. Watson  
+
+  73. Brooks  
+
+  74. Kelly  
+
+  75. Sanders  
+
+  76. Price  
+
+  77. Bennett  
+
+  78. Wood  
+
+  79. Barnes  
+
+  80. Ross  
+
+  81. Henderson  
+
+  82. Coleman  
+
+  83. Jenkins  
+
+  84. Perry  
+
+  85. Powell  
+
+  86. Long  
+
+  87. Patterson  
+
+  88. Hughes  
+
+  89. Flores  
+
+  90. Washington  
+
+  91. Butler  
+
+  92. Simmons  
+
+  93. Foster  
+
+  94. Gonzales  
+
+  95. Bryant   
+
+  96. Alexander  
+
+  97. Russell  
+
+  98. Griffin   
+
+  99. Diaz  
+
+  100. Hayes  """
+    namez = namez.split()
+    for i in range(len(namez)):
+        try:
+            check = float(namez[i])
+            namez.pop(i)
+        except:
+            b= 1
+    return namez
+
+def otherlist(num):
+    if num == 0:
+        a = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September' \
+             ,'October', 'November', 'December']
+    if num == 1:
+        a = []
+        for i in range(1, 25):
+            a.append(str(i))
+    if num == 2:
+        a = []
+        for i in range(1980, 2000):
+            a.append(str(i))
+    if num == 3:
+        a = str(random.randint(10000000000, 99999999999))
+    return a
+
+#p8fvjfm7rtze5dv63dnzxnqrbbh62fb8 key
+def fullname(num, space):
+    total = []
+    n = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+    email = ['@outlook.com', '@yahoo.com', '@gmail.com', '@protonmail.com', '@aol.com']
+    f = names()
+    l = lastname()
+    if space == 1:
+        s = " "
+        nnn = ""
+    if space == 0:
+        s = ""
+        nnn = ""
+    for i in range(num):
+        if space == 2 or space == 3:
+            nnn = []
+            s = ""
+            ntime = random.randint(3, 6)
+            for i in range(ntime):
+                nn = random.choice(n)
+                nnn.append(nn)
+            nnn = "".join(nnn)
+        ff = random.choice(f)
+        ll = random.choice(l)
+        fl = "%s%s%s%s" % (ff, s, ll, nnn)
+        if space == 3:
+            fl = fl + random.choice(email)
+        total.append(fl)
+    return total
+
+
+def phone_num(num):
+    area_codes = """201 - Jersey City, NJ
+202 - District of Columbia
+203 - Bridgeport, CT
+204 - Manitoba
+205 - Birmingham, AL
+206 - Seattle, WA
+207 - Portland, ME
+208 - Idaho
+209 - Stockton, CA
+210 - San Antonio, TX
+212 - New York, NY
+213 - Los Angeles, CA
+214 - Dallas, TX
+215 - Philadelphia, PA
+216 - Cleveland, OH
+217 - Springfield, IL
+218 - Duluth, MN
+219 - Hammond, IN
+220 - Newark, OH
+223 - Lancaster, PA
+224 - Elgin, IL
+225 - Baton Rouge, LA
+226 - London, ON
+228 - Gulfport, MS
+229 - Albany, GA
+231 - Muskegon, MI
+234 - Akron, OH
+236 - Vancouver, BC
+239 - Cape Coral, FL
+240 - Germantown, MD
+248 - Troy, MI
+249 - Sudbury, ON
+250 - Kelowna, BC
+251 - Mobile, AL
+252 - Greenville, NC
+253 - Tacoma, WA
+254 - Killeen, TX
+256 - Huntsville, AL
+260 - Fort Wayne, IN
+262 - Kenosha, WI
+267 - Philadelphia, PA
+269 - Kalamazoo, MI
+270 - Bowling Green, KY
+272 - Scranton, PA
+276 - Bristol, VA
+279 - Sacramento, CA
+281 - Houston, TX
+289 - Hamilton, ON
+301 - Germantown, MD
+302 - Delaware
+303 - Denver, CO
+304 - West Virginia
+305 - Miami, FL
+306 - Saskatchewan
+307 - Wyoming
+308 - Grand Island, NE
+309 - Peoria, IL
+310 - Los Angeles, CA
+312 - Chicago, IL
+313 - Detroit, MI
+314 - St. Louis, MO
+315 - Syracuse, NY
+316 - Wichita, KS
+317 - Indianapolis, IN
+318 - Shreveport, LA
+319 - Cedar Rapids, IA
+320 - St. Cloud, MN
+321 - Orlando, FL
+323 - Los Angeles, CA
+325 - Abilene, TX
+330 - Akron, OH
+331 - Aurora, IL
+332 - New York, NY
+334 - Montgomery, AL
+336 - Greensboro, NC
+337 - Lafayette, LA
+339 - Boston, MA
+340 - Virgin Islands
+343 - Ottawa, ON
+346 - Houston, TX
+347 - New York, NY
+351 - Lowell, MA
+352 - Gainesville, FL
+360 - Vancouver, WA
+361 - Corpus Christi, TX
+364 - Bowling Green, KY
+365 - Hamilton, ON
+367 - Quebec, QC
+380 - Columbus, OH
+385 - Salt Lake City, UT
+386 - Palm Coast, FL
+401 - Providence, RI
+402 - Omaha, NE
+403 - Calgary, AB
+404 - Atlanta, GA
+405 - Oklahoma City, OK
+406 - Montana
+407 - Orlando, FL
+408 - San Jose, CA
+409 - Beaumont, TX
+410 - Baltimore, MD
+412 - Pittsburgh, PA
+413 - Springfield, MA
+414 - Milwaukee, WI
+415 - San Francisco, CA
+416 - Toronto, ON
+417 - Springfield, MO
+418 - Quebec, QC
+419 - Toledo, OH
+423 - Chattanooga, TN
+424 - Los Angeles, CA
+425 - Bellevue, WA
+430 - Tyler, TX
+431 - Manitoba
+432 - Midland, TX
+434 - Lynchburg, VA
+435 - St. George, UT
+437 - Toronto, ON
+438 - Montreal, QC
+440 - Parma, OH
+442 - Oceanside, CA
+443 - Baltimore, MD
+445 - Philadelphia, PA
+450 - Granby, QC
+458 - Eugene, OR
+463 - Indianapolis, IN
+469 - Dallas, TX
+470 - Atlanta, GA
+475 - Bridgeport, CT
+478 - Macon, GA
+479 - Fort Smith, AR
+480 - Mesa, AZ
+484 - Allentown, PA
+501 - Little Rock, AR
+502 - Louisville, KY
+503 - Portland, OR
+504 - New Orleans, LA
+505 - Albuquerque, NM
+506 - New Brunswick
+507 - Rochester, MN
+508 - Worcester, MA
+509 - Spokane, WA
+510 - Oakland, CA
+512 - Austin, TX
+513 - Cincinnati, OH
+514 - Montreal, QC
+515 - Des Moines, IA
+516 - Hempstead, NY
+517 - Lansing, MI
+518 - Albany, NY
+519 - London, ON
+520 - Tucson, AZ
+530 - Redding, CA
+531 - Omaha, NE
+534 - Eau Claire, WI
+539 - Tulsa, OK
+540 - Roanoke, VA
+541 - Eugene, OR
+548 - London, ON
+551 - Jersey City, NJ
+559 - Fresno, CA
+561 - West Palm Beach, FL
+562 - Long Beach, CA
+563 - Davenport, IA
+564 - Vancouver, WA
+567 - Toledo, OH
+570 - Scranton, PA
+571 - Arlington, VA
+573 - Columbia, MO
+574 - South Bend, IN
+575 - Las Cruces, NM
+579 - Granby, QC
+580 - Lawton, OK
+581 - Quebec, QC
+585 - Rochester, NY
+586 - Warren, MI
+587 - Calgary, AB
+601 - Jackson, MS
+602 - Phoenix, AZ
+603 - New Hampshire
+604 - Vancouver, BC
+605 - South Dakota
+606 - Ashland, KY
+607 - Binghamton, NY
+608 - Madison, WI
+609 - Trenton, NJ
+610 - Allentown, PA
+612 - Minneapolis, MN
+613 - Ottawa, ON
+614 - Columbus, OH
+615 - Nashville, TN
+616 - Grand Rapids, MI
+617 - Boston, MA
+618 - Belleville, IL
+619 - San Diego, CA
+620 - Hutchinson, KS
+623 - Phoenix, AZ
+626 - Pasadena, CA
+628 - San Francisco, CA
+629 - Nashville, TN
+630 - Aurora, IL
+631 - Brentwood, NY
+636 - O'Fallon, MO
+639 - Saskatchewan
+640 - Trenton, NJ
+641 - Mason City, IA
+646 - New York, NY
+647 - Toronto, ON
+650 - San Mateo, CA
+651 - St. Paul, MN
+657 - Anaheim, CA
+660 - Sedalia, MO
+661 - Bakersfield, CA
+662 - Southaven, MS
+667 - Baltimore, MD
+669 - San Jose, CA
+670 - Northern Mariana Islands
+671 - Guam
+678 - Atlanta, GA
+680 - Syracuse, NY
+681 - West Virginia
+682 - Fort Worth, TX
+684 - American Samoa
+
+"""
+    area_codes = area_codes.split()
+    ac = []
+    pn = []
+    for a in area_codes:
+        try:
+            a = int(a)
+            ac.append(a)
+        except:
+            pass
+    for i in range(num):
+        phone_num = str(random.choice(ac)) + '-' + str(random.randint(100, 900)) + '-' + str(random.randint(1000, 9999))
+        pn.append(phone_num)
+    return pn
+def zipcode():
+    final_zip = []
+    richpeople = ['33109', '94027', '33480', '94301', '10577', '19035', '90067', \
+               '02493', '60043', '94111']
+    zips = """
+    10282 – New York City
+    94105 – San Francisco
+    10005 – New York City
+    02199 – Boston
+    02110 – Boston
+    22213 – Arlington, VA
+    22201 – Arlington, VA
+    10007 – New York City
+    22301 – Arlington, VA
+    10021 – New York City
+"""
+    zips = zips.split(' ')
+    for a in zips:
+        try:
+            a = int(a)
+            final_zip.append(a)
+        except:
+            pass
+    for r in richpeople:
+        final_zip.append(r)
+    return final_zip
+
